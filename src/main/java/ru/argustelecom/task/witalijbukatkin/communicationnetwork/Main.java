@@ -3,16 +3,16 @@
  * Github profile: https://github.com/witalijbukatkin
  */
 
-package ru.argustelecom.task.witalijbukatkin;
+package ru.argustelecom.task.witalijbukatkin.communicationnetwork;
 
-import ru.argustelecom.task.witalijbukatkin.entity.Connector;
-import ru.argustelecom.task.witalijbukatkin.entity.Link;
-import ru.argustelecom.task.witalijbukatkin.entity.Node;
+import ru.argustelecom.task.witalijbukatkin.communicationnetwork.entity.Connector;
+import ru.argustelecom.task.witalijbukatkin.communicationnetwork.entity.Link;
+import ru.argustelecom.task.witalijbukatkin.communicationnetwork.entity.Node;
 
 import java.util.stream.Stream;
 
-import static ru.argustelecom.task.witalijbukatkin.util.EntityManagerUtil.getEntityManager;
-import static ru.argustelecom.task.witalijbukatkin.util.EntityManagerUtil.shutdown;
+import static ru.argustelecom.task.witalijbukatkin.communicationnetwork.util.EntityManagerUtil.getEntityManager;
+import static ru.argustelecom.task.witalijbukatkin.communicationnetwork.util.EntityManagerUtil.shutdown;
 
 public class Main {
 
