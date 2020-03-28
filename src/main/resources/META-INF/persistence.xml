@@ -1,0 +1,26 @@
+<!--
+  ~ Copyright (c) 2020. Witalij Bukatkin
+  ~ Github profile: https://github.com/witalijbukatkin
+  -->
+
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://java.sun.com/xml/ns/persistence"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="entity">
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+
+            <property name="hibernate.connection.url" value="jdbc:h2:mem:taskdb"/>
+            <property name="hibernate.connection.username" value="sa"/>
+            <property name="hibernate.connection.password" value="password"/>
+
+            <!--Debug-->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.hbm2ddl.import_files" value="/populatedb.sql"/>
+        </properties>
+    </persistence-unit>
+</persistence>
