@@ -1,4 +1,4 @@
-### Communication DB
+### Communication Network DB
 
 Describe communication network as jpa objects:
 - Node, consist of connectors as router.

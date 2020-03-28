@@ -3,7 +3,7 @@
  * Github profile: https://github.com/witalijbukatkin
  */
 
-package main.java.ru.argustelecom.task.witalijbukatkin.entity;
+package ru.argustelecom.task.witalijbukatkin.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;

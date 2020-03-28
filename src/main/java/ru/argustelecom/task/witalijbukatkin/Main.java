@@ -3,7 +3,7 @@
  * Github profile: https://github.com/witalijbukatkin
  */
 
-package main.java.ru.argustelecom.task.witalijbukatkin;
+package ru.argustelecom.task.witalijbukatkin;
 
 import ru.argustelecom.task.witalijbukatkin.entity.Connector;
 import ru.argustelecom.task.witalijbukatkin.entity.Link;
