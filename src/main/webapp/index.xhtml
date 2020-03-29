@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Nodes</title>
+</h:head>
+
+<h:body bgcolor="black">
+    <h2>Title</h2>
+
+    <h:outputText value="Welcome #{helloBean.name}"/>
+
+    <h:dataTable border="1" value="#{helloBean.all}" var="o">
+
+        <h:column>
+            <f:facet name="header">Title</f:facet>
+            <h:outputText value="#{o}"/>
+        </h:column>
+
+        <h:column>
+            <h:form>
+                <h:commandButton value="Show" action="#{helloBean.getName()}" />
+            </h:form>
+        </h:column>
+
+    </h:dataTable>
+</h:body>
+</html>
