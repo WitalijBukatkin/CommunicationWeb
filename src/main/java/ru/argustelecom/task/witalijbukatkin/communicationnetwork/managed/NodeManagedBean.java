@@ -1,4 +1,4 @@
-package ru.argustelecom.task.witalijbukatkin.communicationnetwork;
+package ru.argustelecom.task.witalijbukatkin.communicationnetwork.managed;
 
 import ru.argustelecom.task.witalijbukatkin.communicationnetwork.dao.NodeDao;
 import ru.argustelecom.task.witalijbukatkin.communicationnetwork.entity.Node;
@@ -15,7 +15,6 @@ public class NodeManagedBean {
     private NodeDao dao;
 
     public Collection<Node> getAll(){
-//        System.out.println("node managed bean");
         return dao.getAll();
     }
 }
