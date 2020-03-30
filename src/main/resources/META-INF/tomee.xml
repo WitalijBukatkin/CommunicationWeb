@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<tomee>
+    <Resource id="entity" type="javax.sql.DataSource">
+        jdbcUrl jdbc:h2:file:../../../../taskdb;AUTO_SERVER=TRUE
+        jdbcDriver = org.h2.Driver
+        username = sa
+        password = password
+        jtaManaged true
+    </Resource>
+</tomee>

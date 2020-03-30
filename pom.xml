@@ -27,6 +27,27 @@
                 <artifactId>cargo-maven2-plugin</artifactId>
                 <version>1.7.5</version>
                 <configuration>
+                    <container>
+                        <containerId>tomee8x</containerId>
+                        <zipUrlInstaller>
+                            <url>https://repo.maven.apache.org/maven2/org/apache/tomee/apache-tomee/8.0.0-M2/apache-tomee-8.0.0-M2-plus.zip</url>
+                        </zipUrlInstaller>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.h2database</groupId>
+                                <artifactId>h2</artifactId>
+                            </dependency>
+                        </dependencies>
+                    </container>
+                    <configuration>
+                        <configfiles>
+                            <configfile>
+                                <file>src/main/resources/META-INF/tomee.xml</file>
+                                <todir>conf</todir>
+                                <tofile>tomee.xml</tofile>
+                            </configfile>
+                        </configfiles>
+                    </configuration>
                     <deployables>
                         <deployable>
                             <groupId>${project.groupId}</groupId>
@@ -40,6 +61,19 @@
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.ejb</groupId>
+            <artifactId>ejb-api</artifactId>
+            <version>3.0</version>
+            <scope>provided</scope>
+        </dependency>
+
         <!--ORM-->
         <dependency>
             <groupId>org.hibernate</groupId>

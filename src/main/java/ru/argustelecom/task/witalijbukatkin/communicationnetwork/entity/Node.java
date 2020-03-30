@@ -7,6 +7,7 @@ package ru.argustelecom.task.witalijbukatkin.communicationnetwork.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -18,12 +19,16 @@ public class Node extends NamedEntity {
     @OneToMany(mappedBy = "node")
     private Set<Connector> connectors;
 
-    public Node(long id, String name, String region, String street, String house, Set<Connector> connectors) {
+    public Node(Long id, String name, String region, String street, String house, Set<Connector> connectors) {
         super(id, name);
         this.region = region;
         this.street = street;
         this.house = house;
         this.connectors = connectors;
+    }
+
+    public Node(String name, String region, String street, String house) {
+        this(null, name, region, street, house, Set.of());
     }
 
     public Node(){
