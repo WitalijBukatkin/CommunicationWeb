@@ -24,6 +24,7 @@ Populate DB is `resources/populatedb.sql`
 ### Run this in *nix
 ```
 git clone http://github.com/witalijbukatkin/communicationweb
+cd communicationweb
 mvn package cargo:run
 ```
 Connect to host from browser:
