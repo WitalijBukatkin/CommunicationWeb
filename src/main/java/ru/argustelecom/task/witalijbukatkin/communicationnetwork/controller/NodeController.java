@@ -1,6 +1,9 @@
 package ru.argustelecom.task.witalijbukatkin.communicationnetwork.controller;
 
-import ru.argustelecom.task.witalijbukatkin.communicationnetwork.service.NodeService;
+import ru.argustelecom.task.witalijbukatkin.communicationnetwork.service.ConnectorService;
+import ru.argustelecom.task.witalijbukatkin.communicationnetwork.service.LinkService;
+import ru.argustelecom.task.witalijbukatkin.communicationnetwork.to.ConnectorTo;
+import ru.argustelecom.task.witalijbukatkin.communicationnetwork.to.LinkTo;
 import ru.argustelecom.task.witalijbukatkin.communicationnetwork.to.NodeTo;
 
 import javax.ejb.EJB;
@@ -11,10 +14,30 @@ import java.util.Collection;
 @ManagedBean
 @RequestScoped
 public class NodeController {
-    @EJB
-    private NodeService dao;
+    public NodeTo node;
 
-    public Collection<NodeTo> getAll() {
-        return dao.getAll();
+    @EJB
+    private ConnectorService connectorService;
+
+    @EJB
+    private LinkService linkService;
+
+    public String createNodePage(NodeTo node) {
+        this.node = node;
+        return "node";
+    }
+
+    public NodeTo getNode() {
+        return node;
+    }
+
+    public Collection<ConnectorTo> getConnectors() {
+        return node == null ? null :
+                connectorService.getAll(node.getId());
+    }
+
+    public Collection<LinkTo> getLinks(long connectorId) {
+        return node == null ? null :
+                linkService.getAll(connectorId);
     }
 }

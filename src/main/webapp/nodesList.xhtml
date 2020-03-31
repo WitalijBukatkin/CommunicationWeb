@@ -13,7 +13,7 @@
 <h:body>
     <h2>Nodes</h2>
 
-    <h:dataTable border="1" value="#{nodeController.all}" var="node">
+    <h:dataTable border="1" value="#{nodesListController.all}" var="node">
 
         <h:column>
             <f:facet name="header">Id</f:facet>
@@ -57,7 +57,7 @@
 
         <h:column>
             <h:form>
-                <h:commandButton value="Show" action="#{connectorController.getConnectorsForNode(node.id, node.name)}"/>
+                <h:commandButton value="Show" action="#{nodeController.createNodePage(node)}"/>
             </h:form>
         </h:column>
 
