@@ -17,8 +17,7 @@ Link defined two points deference connectors:
 2. Create website of two pages on ejb and jsp
 
 #### Result in
-- Entity package as source files.
-- Example populate database with temp data.
+Two pages print network
 
 Populate DB is `resources/populatedb.sql`
 
