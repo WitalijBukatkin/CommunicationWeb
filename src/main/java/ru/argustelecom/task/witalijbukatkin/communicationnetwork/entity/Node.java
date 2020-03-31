@@ -7,7 +7,6 @@ package ru.argustelecom.task.witalijbukatkin.communicationnetwork.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -69,7 +68,7 @@ public class Node extends NamedEntity {
     @Override
     public String toString() {
         return "Node{" +
-                "name=" + getName() +
+                "name='" + getName() + '\'' +
                 ", region='" + region + '\'' +
                 ", street='" + street + '\'' +
                 ", house=" + house +

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Nodes</title>
+</h:head>
+
+<h:body>
+    <h2>Nodes</h2>
+
+    <h:dataTable border="1" value="#{nodeController.all}" var="node">
+
+        <h:column>
+            <f:facet name="header">Id</f:facet>
+            <h:outputText value="#{node.id}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Name</f:facet>
+            <h:outputText value="#{node.name}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Region</f:facet>
+            <h:outputText value="#{node.region}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Street</f:facet>
+            <h:outputText value="#{node.street}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">House</f:facet>
+            <h:outputText value="#{node.house}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Connectors</f:facet>
+            <h:outputText value="#{node.connectorsCount}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Points</f:facet>
+            <h:outputText value="#{node.pointsCount}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Points free</f:facet>
+            <h:outputText value="#{node.pointsFree}"/>
+        </h:column>
+
+        <h:column>
+            <h:form>
+                <h:commandButton value="Show" action="#{connectorController.getConnectorsForNode(node.id, node.name)}"/>
+            </h:form>
+        </h:column>
+
+    </h:dataTable>
+</h:body>
+</html>

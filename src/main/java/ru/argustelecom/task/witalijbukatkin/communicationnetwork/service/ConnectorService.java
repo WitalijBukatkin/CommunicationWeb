@@ -1,4 +1,4 @@
-package ru.argustelecom.task.witalijbukatkin.communicationnetwork.dao;
+package ru.argustelecom.task.witalijbukatkin.communicationnetwork.service;
 
 import ru.argustelecom.task.witalijbukatkin.communicationnetwork.entity.Connector;
 
@@ -8,13 +8,13 @@ import javax.persistence.PersistenceContext;
 import java.util.Collection;
 
 @Stateful
-public class ConnectorDao {
+public class ConnectorService {
     @PersistenceContext
     private EntityManager em;
 
-    public Collection<Connector> getAllForNode(long node){
+    public Collection<Connector> getAllForNode(String nodeId) {
         return em.createQuery("SELECT c FROM Connector c WHERE c.node = :node", Connector.class)
-                .setParameter("node", node)
+                .setParameter("node", nodeId)
                 .getResultList();
     }
 }
