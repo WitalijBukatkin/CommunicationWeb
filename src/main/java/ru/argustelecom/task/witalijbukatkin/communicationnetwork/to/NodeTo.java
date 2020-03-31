@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2020. Witalij Bukatkin
+ * Github profile: https://github.com/witalijbukatkin
+ */
+
 package ru.argustelecom.task.witalijbukatkin.communicationnetwork.to;
 
 public class NodeTo {

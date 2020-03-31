@@ -1,8 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 
+<!--
+  ~ Copyright (c) 2020. Witalij Bukatkin
+  ~ Github profile: https://github.com/witalijbukatkin
+  -->
+
 <tomee>
     <Resource id="entity" type="javax.sql.DataSource">
-        jdbcUrl jdbc:h2:file:../../../../taskdb;AUTO_SERVER=TRUE
+        jdbcUrl jdbc:h2:file:./taskdb;AUTO_SERVER=TRUE
         jdbcDriver = org.h2.Driver
         username = sa
         password = password

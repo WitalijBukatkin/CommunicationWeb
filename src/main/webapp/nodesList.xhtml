@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2020. Witalij Bukatkin
+  ~ Github profile: https://github.com/witalijbukatkin
+  -->
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,13 +14,16 @@
 
 <h:head>
     <title>Nodes</title>
+
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+
+    <link rel="stylesheet" href="webjars/bootstrap/4.4.1/css/bootstrap.min.css"/>
 </h:head>
 
-<h:body>
-    <h2>Nodes</h2>
+<h:body  styleClass="bg-dark">
+    <h2 class="text-primary">Nodes</h2>
 
-    <h:dataTable border="1" value="#{nodesListController.all}" var="node">
-
+    <h:dataTable border="1" value="#{nodesListController.all}" var="node" styleClass="table table-dark">
         <h:column>
             <f:facet name="header">Id</f:facet>
             <h:outputText value="#{node.id}"/>
@@ -57,10 +66,9 @@
 
         <h:column>
             <h:form>
-                <h:commandButton value="Show" action="#{nodeController.createNodePage(node)}"/>
+                <h:commandButton value="Show" styleClass="btn btn-primary" action="#{nodeController.createNodePage(node)}"/>
             </h:form>
         </h:column>
-
     </h:dataTable>
 </h:body>
 </html>

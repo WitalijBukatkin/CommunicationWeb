@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2020. Witalij Bukatkin
+  ~ Github profile: https://github.com/witalijbukatkin
+  -->
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,12 +14,14 @@
 
 <h:head>
     <title><h:outputText value="#{nodeController.node.name}"/></title>
+
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+    <link rel="stylesheet" href="webjars/bootstrap/4.4.1/css/bootstrap.min.css"/>
 </h:head>
 
-<h:body>
-    <h2>
-        <h:outputText
-                value="#{nodeController.node.name} - #{nodeController.node.region} - #{nodeController.node.street} - #{nodeController.node.house}"/>
+<h:body styleClass="bg-dark text-white">
+    <h2 class="text-primary">
+        <h:outputText value="#{nodeController.node.name} - #{nodeController.node.region} - #{nodeController.node.street} - #{nodeController.node.house}"/>
     </h2>
 
     <div>
@@ -32,7 +40,7 @@
     </div>
     <br/>
 
-    <h:dataTable border="1" value="#{nodeController.connectors}" var="connector">
+    <h:dataTable border="1" value="#{nodeController.connectors}" var="connector" styleClass="table table-dark">
         <h:column>
             <f:facet name="header">Id</f:facet>
             <h:outputText value="#{connector.id}"/>
@@ -51,7 +59,7 @@
         <h:column>
             <f:facet name="header">Link</f:facet>
 
-            <h:dataTable border="1" value="#{nodeController.getLinks(connector.id)}" var="link">
+            <h:dataTable border="1" value="#{nodeController.getLinks(connector.id)}" var="link" styleClass="table table-dark">
                 <h:column>
                     <f:facet name="header">Id</f:facet>
                     <h:outputText value="#{link.id}"/>
@@ -83,7 +91,7 @@
 
     <h:column>
         <h:form>
-            <h:commandButton value="Back to all nodes" action="nodesList"/>
+            <h:commandButton value="Back to all nodes" action="nodesList" styleClass="btn btn-primary"/>
         </h:form>
     </h:column>
 </h:body>

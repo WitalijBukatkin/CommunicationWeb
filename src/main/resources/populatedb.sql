@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2020. Witalij Bukatkin
+ * Github profile: https://github.com/witalijbukatkin
+ */
+
+--
+--
+
 INSERT INTO Node VALUES (1, 'Узел1', '18', 'СПб', 'Марата');
 INSERT INTO Node VALUES (2, 'Узел2', '2/А', 'СПб', 'Куйбышева');
 
