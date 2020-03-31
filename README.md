@@ -1,4 +1,4 @@
-### Communication Network DB
+### Communication Network Web
 
 Describe communication network as jpa objects:
 - Node, consist of connectors as router.
@@ -13,7 +13,8 @@ Link defined two points deference connectors:
 ` SourcePoint, TargetPoint, SourceConnector, TargetConnector`
 
 #### Task:
-Develop entity beans, connect with jpa annotations
+1. Develop entity beans, connect with jpa annotations
+2. Create website of two pages on ejb and jsp
 
 #### Result in
 - Entity package as source files.
@@ -21,9 +22,13 @@ Develop entity beans, connect with jpa annotations
 
 Populate DB is `resources/populatedb.sql`
 
-### Run this
+### Run this in *nix
 ```
-git clone http://github.com/witalijbukatkin/communicationdb
-mvn package
-java -jar target/*-jar-with-dependencies.jar
+git clone http://github.com/witalijbukatkin/communicationweb
+mvn package cargo:run
 ```
+Connect to host from browser:
+`http://{you_ip}:8080/web`
+
+IP Address can find out like this:
+`hostname -I`
