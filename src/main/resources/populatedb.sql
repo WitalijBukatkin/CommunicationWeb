@@ -1,9 +1,6 @@
-/*
- * Copyright (c) 2020. Witalij Bukatkin
- * Github profile: https://github.com/witalijbukatkin
- */
-
 --
+--  Copyright (c) 2020. Witalij Bukatkin
+--  Github profile: https://github.com/witalijbukatkin
 --
 
 INSERT INTO Node VALUES (1, 'Узел1', '18', 'СПб', 'Марата');
