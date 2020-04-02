@@ -18,11 +18,11 @@ public class NodeService {
     private EntityManager em;
 
     public List<NodeTo> getAll() {
-        return em.createNativeQuery("SELECT N.*, count(C.ID) `connectorscount`, sum(C.CAPACITY) `pointscount`, " +
+        return em.createNativeQuery("SELECT N.*, count(C.ID) connectorscount, sum(C.CAPACITY) pointscount, " +
                 " sum(( SELECT count(L.ID) FROM Link L" +
                 "       WHERE L.SOURCECONNECTOR_ID = C.ID " +
                 "           OR L.TARGETCONNECTOR_ID = C.ID " +
-                ")) `pointsbusy` " +
+                ")) pointsbusy " +
                 "FROM Node N, Connector C " +
                 "WHERE N.ID = C.NODE_ID " +
                 "GROUP BY N.ID", NodeTo.class)
